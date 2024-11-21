@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gaceta Play</title>
+    <script src='https://cdn.tailwindcss.com'></script>
+    <script src='https://kit.fontawesome.com/cea33d77ef.js' crossorigin='anonymous'></script>
+    <style media='all' id='fa-v4-font-face'></style>
+    <link rel="shortcut icon" href="assets/media/logos/gaceta.png" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body class="w-full min-h-screen bg-slate-950 flex flex-col items-center justify-start">
+
+    <header class="w-full h-16 bg-gray-950 flex items-center justify-between">
+        <nav class="navegador h-full w-4/12 flex items-center justify-start gap-8 pl-8">
+            <!-- <a href="" class="text-md text-gray-200 font-poppins">Inmortal</a> -->
+            <a href="" class="text-sm text-gray-200 font-poppins">Sobre Gaceta</a>
+            <a href="" class="text-sm text-gray-200 font-poppins">Artistas</a>
+            <a href="" class="text-sm text-gray-200 font-poppins">Contacto</a>
+        </nav>
+        <div class="w-4/12 h-full flex items-center justify-center">
+            <img src="assets/media/logos/gaceta.png" alt="" class="h-full">
+        </div>
+        <nav class="redes h-full w-4/12 flex items-center justify-end pr-6 gap-8">
+            <a href="https://www.instagram.com/gacetaplay/" target="_blank"
+                class="text-xl text-blue-300 font-poppins"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.youtube.com/@gacetaplay" target="_blank" class="text-xl text-blue-300 font-poppins"><i
+                    class="fa-brands fa-youtube"></i></a>
+            <a href="https://x.com/gacetaplay" target="_blank" class="text-xl text-blue-300 font-poppins"><i
+                    class="fa-brands fa-x"></i></a>
+            <a href="https://open.spotify.com/playlist/3GMnzRucNRyIfJbJSxDR23" target="_blank"
+                class="text-xl text-blue-300 font-poppins"><i class="fa-brands fa-spotify"></i></a>
+
+        </nav>
+    </header>
+
+    <section class="w-full h-screen flex items-center justify-center overflox-hidden">
+        <!-- Ramma -->
+        <aside class="background-section w-8/12 h-full flex flex-col items-center justify-between">
+            <div class="text-8xl m-8 font-bricolage text-white font-black w-10/12">
+                <h1>IN<span class="text-red-500">MORTAL</span></h1>
+            </div>
+
+            <div class="cronometro w-10/12 h-32 mb-16 rounded-xl text-white flex items-center justify-center">
+                <div class="flex items-center justify-between w-11/12 text-center ">
+
+                    <div class="time-box">
+                        <span id="days" class="text-7xl font-black">0</span><br>
+                        <p class="text-gray-300 text-sm">Días</p>
+                    </div>
+                    <p class="text-3xl">:</p>
+                    <div class="time-box">
+                        <span id="hours" class="text-7xl font-black">0</span><br>
+                        <p class="text-gray-300 text-sm">Horas</p>
+                    </div>
+                    <p class="text-3xl">:</p>
+                    <div class="time-box">
+                        <span id="minutes" class="text-7xl font-black">0</span><br>
+                        <p class="text-gray-300 text-sm">Minutos</p>
+                    </div>
+                    <p class="text-3xl">:</p>
+                    <div class="time-box">
+                        <span id="seconds" class="text-7xl font-black">0</span><br>
+                        <p class="text-gray-300 text-sm">Segundos</p>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <div class="h-full w-4/12 bg-black flex items-center justify-center">
+            <img src="assets/media/logos/gaceta.png" alt="Gaceta Logo">
+        </div>
+
+    </section>
+
+    <!-- <div class="w-full h-screen bg-gray-50 flex items-center justify-start">
+        <div class="card"></div>
+    </div> -->
+
+    <section class="h-screen font-bricolage w-full bg-gray-50 flex flex-col lg:flex-row items-center gap-8 p-8">
+        <!-- Tarjeta de Introducción -->
+        <div class="bg-slate-950 text-white p-8 h-5/6 rounded-lg w-full lg:w-3/12">
+            <h1 class="text-3xl font-bold mb-4 text-blue-300">Artistas Discográficos</h1>
+            <p>
+                Nuestra discográfica encuentra talento en nuestra base de datos de distribución y ofrece acuerdos y
+                servicios a la medida para amplificar el éxito de las canciones con impulso.
+            </p>
+        </div>
+
+        <!-- Carrusel de Artistas -->
+        <div class="carru w-full lg:w-2/3 relative overflow-hidden h-full flex items-center justify-between">
+            <!-- Botón Izquierdo -->
+            <button id="prev"
+                class="btn absolute left-0 top-1/2 transform -translate-y-1/2 text-white p-2 rounded-full z-10">
+                <i class="fa-solid fa-chevron-left"></i>
+            </button>
+
+            <!-- Contenedor del carrusel con Flex -->
+            <div id="carousel" class="flex gap-8 font-montserrat transition-transform h-full items-center">
+                <!-- Las tarjetas se agregarán dinámicamente aquí -->
+            </div>
+
+            <!-- Botón Derecho -->
+            <button id="next"
+                class="btn absolute right-0 top-1/2 transform -translate-y-1/2 text-white p-2 rounded-full z-10">
+                <i class="fa-solid fa-chevron-right"></i>
+            </button>
+        </div>
+    </section>
+
+    <section class="vere w-full flex items-center justify-start">
+        <div class="w-5/12 text-white flex items-center justify-center flex-col">
+            <div class="texts w-5/6">
+                <h2 class="text-5xl font-oswald font-black">Campamentos Musicales de <span class="text-blue-300">Gaceta Play</span></h2>
+                <p class="mt-2 font-poppins text-gray-300 font-light">Vive la experiencia de nuestros campamentos musicales, donde aprenderás, crearás y colaborarás en un entorno profesional. Desarrolla tus habilidades y conecta con otros artistas en actividades únicas y creativas.</p>
+            </div>
+        </div>
+
+        <div class="w-7/12 h-full flex items-center justify-between gap-4 p-4 text-gray-50">
+            <a href="https://youtu.be/R2BO2v6PTgY?si=LdeySxjQSVShFY64" class="camp w-full bg-red-300 h-5/6 rounded-md flex items-center justify-center  transform transition-all duration-300 ease-in-out hover:translate-y-[-5px] hover:bg-red-400 hover:shadow-xl hover:opacity-80">
+                <h3 class="font-black font-bricolage text-3xl">GACETA CAMP #1</h3>
+            </a>
+
+            <a href="https://youtu.be/MKFDGc5f_5s?si=apqnK3ZhgtS9u7Kk" class="camp2 w-full bg-red-300 h-5/6 rounded-md flex items-center justify-center  transform transition-all duration-300 ease-in-out hover:translate-y-[-5px] hover:bg-red-400 hover:shadow-xl hover:opacity-80" >
+                <h3 class="font-black font-bricolage text-3xl">GACETA CAMP #2</h3>
+            </a>
+        </div>
+    </section>
+
+    <div class="h-screen bg-white w-full">
+
+    </div>
+
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>

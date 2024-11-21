@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,500;12..96,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+
+html{
+    scroll-behavior: smooth;
+}
+
+.font-montserrat{
+    font-family: 'Montserrat', 'sans-serif';
+}
+
+.font-oswald{
+    font-family: 'Oswald', 'sans-serif';
+}
+
+.font-bricolage{
+    font-family: 'Bricolage Grotesque', 'sans-serif';
+}
+
+.font-poppins{
+    font-family: 'Poppins', 'sans-serif';
+}
+
+.font-inter{
+    font-family: 'Inter', 'sans-serif'
+}
+
+a{
+    text-decoration: none;
+    color: #faf8f8;
+    background-image: linear-gradient(currentColor, currentColor);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    transition: background-size .3s;
+}
+
+header .navegador a:hover, header nav a:focus {
+    /* color: #faf8f8; */
+    background-size: 100% 2px;
+    z-index: 3;
+}
+
+.background-section {
+    position: relative; /* Necesario para posicionar el ::before */
+    z-index: 0; /* Coloca el contenido por encima */
+  }
+  
+  .background-section::before {
+    content: ""; /* Elemento    acío para el fondo */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../media/artistas/ramma (1).jpg'); /* Cambia por tu imagen */
+    background-size: cover; /* Ajusta la imagen al tamaño del section */
+    background-position: center;
+    opacity: 0.3; /* Ajusta la opacidad a tu gusto */
+    z-index: -1; /* Envía el fondo detrás del contenido */
+    pointer-events: none; /* Evita interferencias con el fondo */
+  }
+  
+  .cronometro{
+    background-color: rgba(0, 0, 0, 0.589);
+    display: block;
+}
+
+.time-box {
+    flex: 1;
+    text-align: center;
+  }
+
+  .time-box span {
+    /* display: inline-block;  */
+    width: 5ch; /* Ancho fijo para los números */
+  }
+
+  /* .btn{
+    background-color: rgba(0, 0, 0, 0.219);
+  } */
+
+  #carousel {
+    transition: transform 0.7s ease; /* Transición suave */
+  }
+  
+  .vere{
+    height: 70vh;
+  }
+
+.camp{
+    background-image: url('../media/artistas/camp1.jpg');
+    background-size: cover;
+    text-shadow: 5px 5px 10px #000
+}
+
+.camp2{
+    background-image: url('../media/artistas/camp2.jpg');
+    background-size: cover;
+    text-shadow: 5px 5px 10px #000
+}
+
