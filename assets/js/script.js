@@ -107,15 +107,46 @@ const artists = [
   const next = document.getElementById("next");
   
   let index = 0;
+  changeVisibilityButton(prev, "hidden")
   
   // Deshabilitar o habilitar los botones según la posición
   function updateButtonState() {
     prev.disabled = index === 0;
+    if(prev.disabled = index === 0) changeVisibilityButton(prev, "hidden")
+
     next.disabled = index >= artists.length - 3; // Cambiar a 3 para que sea el último grupo de 3
+    if(next.disabled = index >= artists.length - 3) changeVisibilityButton(next, "hidden")
+  }
+
+  function changeVisibilityButton(element, toDo){
+
+
+      if(toDo == "hidden" && element.classList.contains("hidden")){
+      }else if(toDo == "hidden" && !element.classList.contains("hidden")){
+        element.classList.add("hidden")
+      }else{
+        element.classList.remove("hidden")
+      }
+
+      if(toDo == "inline" && element.classList.contains("inline")){
+      }else if(toDo == "inline" && !element.classList.contains("inline")){
+        element.classList.add("inline")
+      }else{
+        element.classList.remove("inline")
+      }
   }
   
   // Mover el carrusel hacia la izquierda
   prev.addEventListener("click", () => {
+
+    console.log(index)
+    if(index == 2){
+      console.log(index)
+      changeVisibilityButton(prev, "inline")
+    }
+    
+    if(index <= 3) changeVisibilityButton(next, "inline")
+
     if (index > 0) {
       index--;
       updateCarousel();
@@ -124,6 +155,12 @@ const artists = [
   
   // Mover el carrusel hacia la derecha
   next.addEventListener("click", () => {
+    console.log(index)
+    if(index >= 0){
+      console.log(index)
+      changeVisibilityButton(prev, "inline")
+    }
+
     if (index < artists.length - 3) { // Cambiar a 3 para que sea el último grupo de 3
       index++;
       updateCarousel();
